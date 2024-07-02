@@ -109,6 +109,8 @@ return {
 			vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true })
 			vim.keymap.set("n", "co", "<cmd>Lspsaga outline<CR>", { noremap = true, silent = true }) -- Code outline
 			vim.keymap.set("n", "cr", "<cmd>Lspsaga rename<CR>", { noremap = true, silent = true }) -- Code Rename
+
+			require("lspsaga").init_lsp_saga({ code_action_prompt = { enable = false } })
 		end,
 	},
 	{
