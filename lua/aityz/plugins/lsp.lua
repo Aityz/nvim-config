@@ -102,15 +102,17 @@ return {
 		"nvimdev/lspsaga.nvim",
 		event = "LspAttach",
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				ui = {
+					code_action = "",
+				},
+			})
 
 			vim.keymap.set("n", "ca", "<cmd>Lspsaga code_action<CR>", { noremap = true, silent = true })
 			vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { noremap = true, silent = true })
 			vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true })
 			vim.keymap.set("n", "co", "<cmd>Lspsaga outline<CR>", { noremap = true, silent = true }) -- Code outline
 			vim.keymap.set("n", "cr", "<cmd>Lspsaga rename<CR>", { noremap = true, silent = true }) -- Code Rename
-
-			require("lspsaga").init_lsp_saga({ code_action_prompt = { enable = false } })
 		end,
 	},
 	{
