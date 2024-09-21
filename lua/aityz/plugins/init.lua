@@ -7,4 +7,10 @@ return {
 	require("aityz.plugins.copilot"),
 	require("aityz.plugins.lualine"),
 	require("aityz.plugins.btw"),
+	{
+		"Aityz/cratesearch.nvim",
+		config = function()
+			require("cratesearch").setup({})
+		end,
+	},
 }

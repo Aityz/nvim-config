@@ -8,7 +8,7 @@ vim.opt.inccommand = "split"
 
 vim.o.termguicolors = true -- True color support
 
-vim.opt.clipboard = "unnamedplus" -- Copy paste between vim and everything else
+vim.cmd("set clipboard+=unnamedplus")
 
 vim.opt.number = true -- Show line numbers
 vim.opt.relativenumber = true -- Show relative line numbers

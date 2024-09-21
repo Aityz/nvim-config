@@ -19,6 +19,9 @@ return {
 					cpp = { "clang-format" },
 
 					json = { "prettier" },
+
+					html = { "prettier" },
+					css = { "prettier" },
 				},
 			})
 
